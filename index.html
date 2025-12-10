@@ -79,14 +79,14 @@
     </script>
 
     <style>
-        /* CSS PERSONALIZADO (DA VERSÃO ANTIGA) */
+        /* CSS PERSONALIZADO */
         html, body {
             overflow-x: hidden;
             width: 100%;
             position: relative;
         }
 
-        /* Custom Cursor (O Efeito Glow do Mouse) */
+        /* Custom Cursor */
         .cursor-glow {
             width: 400px;
             height: 400px;
@@ -99,7 +99,7 @@
             mix-blend-mode: screen;
         }
 
-        /* Efeito de Ruído (Noise Texture) */
+        /* Efeito de Ruído */
         .bg-noise {
             position: fixed;
             top: 0;
@@ -112,13 +112,11 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
         }
 
-        /* Scrollbar Personalizada */
         ::-webkit-scrollbar { width: 8px; }
         ::-webkit-scrollbar-track { background: #0f0a06; }
         ::-webkit-scrollbar-thumb { background: #3d2b1f; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #df5e16; }
 
-        /* Utilitários Visuais */
         .text-glow { text-shadow: 0 0 20px rgba(250, 163, 9, 0.3); }
         
         .glass-card {
@@ -142,32 +140,18 @@
             color: transparent;
         }
 
-        /* FAQ Accordion Styles */
         .faq-item { transition: all 0.3s ease; border-bottom: 1px solid rgba(255,255,255,0.1); }
         .faq-item:last-child { border-bottom: none; }
         .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
         .faq-toggle:checked ~ .faq-content { max-height: 200px; }
         .faq-toggle:checked ~ label i { transform: rotate(180deg); }
 
-        /* Esconde barra de rolagem no carrossel */
         .scrollbar-hide::-webkit-scrollbar { display: none; }
         .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
 
-        /* Menu Mobile Animation */
-        #mobile-menu {
-            transition: all 0.3s ease-in-out;
-            transform-origin: top;
-        }
-        #mobile-menu.hidden {
-            opacity: 0;
-            transform: scaleY(0);
-            pointer-events: none;
-        }
-        #mobile-menu:not(.hidden) {
-            opacity: 1;
-            transform: scaleY(1);
-            pointer-events: auto;
-        }
+        #mobile-menu { transition: all 0.3s ease-in-out; transform-origin: top; }
+        #mobile-menu.hidden { opacity: 0; transform: scaleY(0); pointer-events: none; }
+        #mobile-menu:not(.hidden) { opacity: 1; transform: scaleY(1); pointer-events: auto; }
     </style>
 </head>
 <body class="font-body bg-nalua-dark text-white overflow-x-hidden selection:bg-nalua-orange selection:text-white cursor-default">
@@ -565,34 +549,6 @@
         </div>
     </section>
 
-    <section class="py-24 relative">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="glass-card rounded-3xl p-10 relative overflow-hidden" data-aos="flip-left" data-aos-duration="1000">
-                    <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-bl from-nalua-orange/20 to-transparent rounded-bl-full"></div>
-                    <h3 class="text-2xl font-bold text-white mb-8">Formas de Pagamento</h3>
-                    <div class="grid grid-cols-3 gap-4">
-                        <div class="bg-nalua-dark/50 p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center aspect-square hover:border-nalua-yellow transition group hover:-translate-y-2"><i class="fa-brands fa-pix text-3xl text-white/50 group-hover:text-nalua-yellow mb-2 transition group-hover:scale-110"></i><span class="text-xs text-white/60 font-bold group-hover:text-white">PIX</span></div>
-                        <div class="bg-nalua-dark/50 p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center aspect-square hover:border-nalua-yellow transition group hover:-translate-y-2"><i class="fa-regular fa-credit-card text-3xl text-white/50 group-hover:text-nalua-yellow mb-2 transition group-hover:scale-110"></i><span class="text-xs text-white/60 font-bold group-hover:text-white">CARTÃO</span></div>
-                        <div class="bg-nalua-dark/50 p-4 rounded-xl border border-white/5 flex flex-col items-center justify-center aspect-square hover:border-nalua-yellow transition group hover:-translate-y-2"><i class="fa-solid fa-money-bill-wave text-3xl text-white/50 group-hover:text-nalua-yellow mb-2 transition group-hover:scale-110"></i><span class="text-xs text-white/60 font-bold group-hover:text-white">DINHEIRO</span></div>
-                    </div>
-                </div>
-                <div class="rounded-3xl p-10 relative overflow-hidden flex flex-col justify-center bg-gradient-to-br from-nalua-card to-black border border-nalua-border animate-float" data-aos="flip-right" data-aos-duration="1000">
-                    <div class="absolute right-0 top-0 w-1/2 h-full"><img src="banner-spa.jpg" class="w-full h-full object-cover opacity-20 mask-image-gradient"></div>
-                    <div class="relative z-10 w-1/2">
-                        <span class="text-nalua-orange font-bold text-xs uppercase mb-2 block">Serviço Adicional</span>
-                        <h3 class="text-3xl font-black text-white mb-4">SPA CAPILAR</h3>
-                        <p class="text-white/60 text-sm mb-6 max-w-xs">Higienização profunda, detox do couro cabeludo e preparação dos fios pré ou pós trança.</p>
-                        <div class="flex items-center gap-4">
-                            <span class="text-2xl font-bold text-white">R$ 60</span>
-                            <button class="px-4 py-2 bg-white/10 hover:bg-white/20 rounded-lg text-xs font-bold uppercase tracking-widest transition text-white border border-white/20 hover:border-nalua-yellow">Adicionar ao pacote</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <section class="py-20 relative bg-[#0f0a06]">
         <div class="container mx-auto px-6 max-w-4xl">
             <div class="glass-card rounded-3xl p-8 md:p-12 border border-nalua-yellow/20" data-aos="zoom-in">
@@ -604,7 +560,7 @@
                     <div class="hidden md:block absolute top-6 left-10 right-10 h-0.5 bg-white/10 -z-10"></div>
                     <div class="relative"><div class="w-12 h-12 bg-nalua-dark border border-nalua-yellow text-nalua-yellow rounded-full flex items-center justify-center text-xl font-bold mx-auto md:mx-0 mb-4 z-10 relative">1</div><h4 class="text-white font-bold mb-2">Pré-Agendamento</h4><p class="text-white/60 text-sm">Você escolhe o serviço e o horário no formulário abaixo.</p></div>
                     <div class="relative"><div class="w-12 h-12 bg-nalua-orange text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto md:mx-0 mb-4 shadow-[0_0_20px_rgba(223,94,22,0.5)] z-10 relative">2</div><h4 class="text-white font-bold mb-2">Confirmação via Sinal (30%)</h4><p class="text-white/60 text-sm">O agendamento só é confirmado mediante pagamento de 30% do valor via PIX. Isso não é uma taxa extra, é parte do pagamento.</p></div>
-                    <div class="relative"><div class="w-12 h-12 bg-nalua-dark border border-white/20 text-white/80 rounded-full flex items-center justify-center text-xl font-bold mx-auto md:mx-0 mb-4 z-10 relative">3</div><h4 class="text-white font-bold mb-2">Garantia Total</h4><p class="text-white/60 text-sm">Isso garante que seu horário seja 100% seu, sem atrasos e com material preparado. O restante é pago apenas no dia.</p></div>
+                    <div class="relative"><div class="w-12 h-12 bg-nalua-dark border border-white/20 text-white/80 rounded-full flex items-center justify-center text-xl font-bold mx-auto md:mx-0 mb-4 z-10 relative">3</div><h4 class="text-white font-bold mb-2">Garantia Total</h4><p class="text-white/60 text-sm">Isso garante que seu horário seja 100% seu, sem atrasos.</p></div>
                 </div>
                 <div class="mt-10 pt-6 border-t border-white/10 text-center">
                     <p class="text-xs font-bold text-white/50 uppercase tracking-widest mb-4">Aceitamos</p>
@@ -727,7 +683,7 @@
         AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('#navbar > div');
-            if (window.scrollY > 50) { navbar.classList.add('bg-nalua-dark/95', 'backdrop-blur-xl'); } 
+            if (window.scrollY > 50) { navbar.classList.add('bg-nalua-dark/95', 'backdrop-blur-xl'); } 
             else { navbar.classList.remove('bg-nalua-dark/95', 'backdrop-blur-xl'); }
         });
         const cursor = document.getElementById('cursor-glow');
