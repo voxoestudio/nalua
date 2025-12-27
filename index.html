@@ -45,8 +45,8 @@
                         'nalua-border': '#3d2b1f',  /* Cor da Borda */
                         'nalua-yellow': '#faa309',  /* Ouro */
                         'nalua-orange': '#df5e16',  /* Laranja Neon */
-                        'nalua-red': '#b21f11',     /* Vermelho */
-                        'nalua-light': '#f3eddf',   /* Creme */
+                        'nalua-red': '#b21f11',      /* Vermelho */
+                        'nalua-light': '#f3eddf',    /* Creme */
                     },
                     fontFamily: {
                         'display': ['"Monoton"', 'cursive'],
@@ -644,7 +644,14 @@
         <div class="container mx-auto px-6 text-center" data-aos="fade-up">
             <h2 class="text-3xl font-black text-white mb-2">@NALUA_BRAIDS</h2>
             <p class="text-white/60 mb-8">Acompanhe nossos bastidores, novidades e resultados incríveis.</p>
-            <div class="mb-8"><behold-widget feed-id="64BuGKCkTCrBTRi8FG0a"></behold-widget></div>
+            
+            <div id="instagram-feed" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 max-w-6xl mx-auto mb-8 min-h-[300px]">
+                <div class="animate-pulse bg-white/5 rounded-2xl h-64 w-full"></div>
+                <div class="animate-pulse bg-white/5 rounded-2xl h-64 w-full"></div>
+                <div class="animate-pulse bg-white/5 rounded-2xl h-64 w-full"></div>
+                <div class="animate-pulse bg-white/5 rounded-2xl h-64 w-full"></div>
+            </div>
+
             <a href="https://www.instagram.com/nalua_braids/" target="_blank" class="inline-flex items-center gap-2 px-8 py-3 rounded-full border border-white/20 text-white font-bold uppercase tracking-widest hover:bg-white hover:text-nalua-dark transition duration-300"><i class="fab fa-instagram text-lg"></i> Seguir no Instagram</a>
         </div>
     </section>
@@ -708,7 +715,6 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        (() => { const d=document,s=d.createElement("script");s.type="module";s.src="https://w.behold.so/widget.js";d.head.append(s); })();
         AOS.init({ once: true, offset: 50, duration: 800, easing: 'ease-out-cubic' });
         window.addEventListener('scroll', () => {
             const navbar = document.querySelector('#navbar > div');
@@ -746,6 +752,38 @@
         const mobileLinks = document.querySelectorAll('.mobile-link');
         mobileMenuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         mobileLinks.forEach(link => { link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); }); });
+
+        // --- LÓGICA DO NOVO WIDGET INSTAGRAM ---
+        const instaData = {"username":"nalua_braids","biography":"-Trancista✨\noi, aqui é a minha demonstração de arte.\n 🏘 Imperatriz/MA\n By @luanagiioh","profilePictureUrl":"https://scontent-sof1-1.cdninstagram.com/v/t51.2885-19/475266968_1142482067260233_5780307255280082870_n.jpg?stp=dst-jpg_s206x206_tt6&_nc_cat=105&ccb=7-5&_nc_sid=bf7eb4&efg=eyJ2ZW5jb2RlX3RhZyI6InByb2ZpbGVfcGljLnd3dy41ODAuQzMifQ%3D%3D&_nc_ohc=ehiXwi32X74Q7kNvwHIYAbD&_nc_oc=Admz70_pQR1VFRhx3i_RI8D-Z58SxTT6VVPtSEyZRoq94GzCTwWUkw9t4kR669i8a-l7gaChMNbE86Kx07UtHJwt&_nc_zt=24&_nc_ht=scontent-sof1-1.cdninstagram.com&edm=AP4hL3IEAAAA&_nc_tpa=Q5bMBQG-OA9-Nj_LKoHlqDv9uE9m-prAmjNELuWaS8H1x3yUQ0SnIg9rXnmArg7cWfNfJ6THQ4xDv47o2g&oh=00_AflHjyrJ_6Gm4zV1w-sYwoEARMerIx8bXCkrRAhWUZQyLg&oe=695498CA","website":"https://wa.me/559984855248","followersCount":2603,"followsCount":1639,"posts":[{"id":"18081213277899129","timestamp":"2025-12-17T21:45:18+0000","permalink":"https://www.instagram.com/p/DSYVByfEV0S/","mediaType":"CAROUSEL_ALBUM","mediaUrl":"https://scontent-sof1-1.cdninstagram.com/v/t51.82787-15/601852046_18090428168486582_6868717757905058213_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=kUKXkYsc26MQ7kNvwHxjXCM&_nc_oc=AdkqudMDVtYDuPLcFsN_7jGQG4uFO_dUjbB_jZnjrgXVgc_hDeZv6Ywh0MXOt2OBii1aVcg7_dpPzrYol9WfWPNn&_nc_zt=23&_nc_ht=scontent-sof1-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=4SRgpM0AFRaLPn1ckPSLqQ&oh=00_AfnRehw5DXfPoG0TuXt0Y0F2iH83Hrhbcziot_LRzxdgdw&oe=6954E8FA","caption":"sessão: UWANNDY✨  Nem preciso dizer o quanto eu amei fazer essa trança bicolor, aqui ela simplesmente definiu uma era💅🏿🫶🏾🥰🥹🩷"},{"id":"18063067238216152","timestamp":"2025-12-15T21:19:08+0000","permalink":"https://www.instagram.com/reel/DSTIDZUkStc/","mediaType":"VIDEO","isReel":true,"mediaUrl":"https://scontent-sof1-1.cdninstagram.com/o1/v/t2/f2/m86/AQN8aLd-KKJ3U7B7Z1SK2_zIk57RkJOHY5Dkm8fTK-vb_0pKLlr0OchE3hQ2UflLWkd6OG3wyqUF8vhSc2WndX3ktHp3pHiZ0AnbbH0.mp4?_nc_cat=100&_nc_sid=5e9851&_nc_ht=scontent-sof1-1.cdninstagram.com&_nc_ohc=vZ2csT6dCaMQ7kNvwG3o_GF&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjU4MjY1MDEzMTY5NTM0NDksImFzc2V0X2FnZV9kYXlzIjoxMSwidmlfdXNlY2FzZV9pZCI6MTAwOTksImR1cmF0aW9uX3MiOjI3LCJ1cmxnZW5fc291cmNlIjoid3d3In0%3D&ccb=17-1&vs=88b6c32309717677&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC8xRTREQzhCRDE4RDg1NDY1NzEwN0REOTM4QkZBOEI5OV92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HSEhXdGlPeExVZm44VUlFQUhlbVNQRnZiNll4YnN0VEFRQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAm0pXOzJ3E4FsVAigCQzMsF0A7szMzMzMzGBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_gid=4SRgpM0AFRaLPn1ckPSLqQ&edm=ANo9K5cEAAAA&_nc_zt=28&_nc_tpa=Q5bMBQFYE9hJS4K41oPmhk-N1AbAhDJbFQkwk2vniDx6kqNFt645YVPWlkGjYTWbcqRRNzCMawHYadt6jg&oh=00_Afl_hDI8vnNyAqdeXde5ru9uZYq42IxT4xnS9tTESEJ__A&oe=6950FB95","thumbnailUrl":"https://scontent-sof1-1.cdninstagram.com/v/t51.82787-15/588599646_18090231380486582_3931481598994441471_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=102&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=ut7xHw4CNgQQ7kNvwG1d1Fh&_nc_oc=AdlHPtbkNprKMzH9nllaHMpETUCygidnpj8nhxrbaynS_DcU4XW7WNWuIOYWR7VlxqM-hCK87PgRzfbJLUch70jh&_nc_zt=23&_nc_ht=scontent-sof1-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=4SRgpM0AFRaLPn1ckPSLqQ&oh=00_AflsA-iULnd8UqOxXFFIxkeLQZo5PHrR_8ZS2LdyrV_Bww&oe=6954F468","caption":"O Nalua Braids está crescendo ✨\nE desse crescimento nasce uma novidade muito especial: a lojinha do Nalua."},{"id":"17903275923302467","timestamp":"2025-12-11T17:05:27+0000","permalink":"https://www.instagram.com/p/DSIYOwvkeCB/","mediaType":"CAROUSEL_ALBUM","mediaUrl":"https://scontent-sof1-2.cdninstagram.com/v/t51.82787-15/590415264_18089792363486582_3868687499320159906_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=znPEfz2vf50Q7kNvwGUq14v&_nc_oc=AdkgvSgey6RZokDfM5p1lyHdDQ-vD24G5_yQtNCA8QKOtNitY9xAhJ3gao54QM6FnLL85rqdtwMQgy813prheOIk&_nc_zt=23&_nc_ht=scontent-sof1-2.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=4SRgpM0AFRaLPn1ckPSLqQ&oh=00_AfklVcz2Cs8HUockAoErzflFMjjrk_VL9JEiIfijUUlHdg&oe=695518B8","caption":"Dump de dezembro: só tranças lindas. ✨"},{"id":"18133452190490530","timestamp":"2025-12-01T16:35:25+0000","permalink":"https://www.instagram.com/p/DRuk2EOkbeG/","mediaType":"CAROUSEL_ALBUM","mediaUrl":"https://scontent-sof1-2.cdninstagram.com/v/t51.82787-15/591075343_18088787990486582_7581264987149685476_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=mw6wzFEuiVgQ7kNvwGpQgEP&_nc_oc=Adnn5FGKSr0YQk2z9eOhW6SE_90NrpH8yjMBhisbZ4wyjj2X_rjtnCTN2JdFWCUJWpa9jyUPieRD85X-4v_aDNBt&_nc_zt=23&_nc_ht=scontent-sof1-2.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=4SRgpM0AFRaLPn1ckPSLqQ&oh=00_AfkPh8sGWUdyasqqe1oG3tBcHaW40BIGOZrjShPCJnAsOg&oe=69550279","caption":"Para um dezembro feliz, um dump de novembro.🤌🏾✨"},{"id":"18085295203995487","timestamp":"2025-11-20T21:05:30+0000","permalink":"https://www.instagram.com/reel/DRSuM-8Eaya/","mediaType":"VIDEO","isReel":true,"mediaUrl":"https://scontent-sof1-1.cdninstagram.com/o1/v/t2/f2/m86/AQMUUenvIXdqYfw4_m6EZGYSuG2wbY2zkBYgGGTB6ljuZItEwZXzIGt3iQhpsrC_LcleHPWgpo2tpvztEphjK59GWBWp8WiaIU2kJqc.mp4?_nc_cat=102&_nc_sid=5e9851&_nc_ht=scontent-sof1-1.cdninstagram.com&_nc_ohc=m3hTlfUcp_EQ7kNvwFzqD2y&efg=eyJ2ZW5jb2RlX3RhZyI6Inhwdl9wcm9ncmVzc2l2ZS5JTlNUQUdSQU0uQ0xJUFMuQzMuNzIwLmRhc2hfYmFzZWxpbmVfMV92MSIsInhwdl9hc3NldF9pZCI6MjI1MjA2NzM4NTI2ODc5NCwiYXNzZXRfYWdlX2RheXMiOjM2LCJ2aV91c2VjYXNlX2lkIjoxMDA5OSwiZHVyYXRpb25fcyI6NTgsInVybGdlbl9zb3VyY2UiOiJ3d3cifQ%3D%3D&ccb=17-1&vs=fd48adddfda7caf2&_nc_vs=HBksFQIYUmlnX3hwdl9yZWVsc19wZXJtYW5lbnRfc3JfcHJvZC80RDQ3M0IzNDczQUJCQTZCNzVCNDEyM0Y4MEQ3MEI5Ml92aWRlb19kYXNoaW5pdC5tcDQVAALIARIAFQIYOnBhc3N0aHJvdWdoX2V2ZXJzdG9yZS9HTzlEdXlLYUg0VVd6OHNFQUNJSEFtd3RVZk1tYnN0VEFRQUYVAgLIARIAKAAYABsCiAd1c2Vfb2lsATEScHJvZ3Jlc3NpdmVfcmVjaXBlATEVAAAm9OiSyMmPgAgVAigCQzMsF0BNap--dsi0GBJkYXNoX2Jhc2VsaW5lXzFfdjERAHX-B2XmnQEA&_nc_gid=4SRgpM0AFRaLPn1ckPSLqQ&edm=ANo9K5cEAAAA&_nc_zt=28&_nc_tpa=Q5bMBQFrh5gFNmPAuHFXVJ01boMO5HdNodBhctO7VErM4t8XodiEIYdBDBSIaxtQDqV1WpKQzfb4LjANAQ&oh=00_AfkU7nI8QX0Zdv4nVOEKiGhENYAKmDGu9qP0sZ0lh-Vxlg&oe=695102BF","thumbnailUrl":"https://scontent-sof1-1.cdninstagram.com/v/t51.71878-15/583856645_1389746792669963_5082194973158556875_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=105&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0xJUFMuYmVzdF9pbWFnZV91cmxnZW4uQzMifQ%3D%3D&_nc_ohc=TZaQZ-NQ-iwQ7kNvwF68QE2&_nc_oc=AdnPeihSt-9WNPg8jKsNS_9M2SHb6dQNO22WfnlLnJ3L1t4ssS18Qwp2yxIzvZlyKVfS30vu4-tCE1w_RFWb8t6e&_nc_zt=23&_nc_ht=scontent-sof1-1.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=4SRgpM0AFRaLPn1ckPSLqQ&oh=00_Afl7sqkBvBpOFJrFFLnlAmno5g4WUc9Fta-5K-eqdlTNrg&oe=6954FA80","caption":"No dia 19 de novembro, fui convidada a integrar a equipe de palestrantes do Dia da Consciência Negra..."},{"id":"18391488229130307","timestamp":"2025-11-12T15:20:54+0000","permalink":"https://www.instagram.com/p/DQ9hNoUEY97/","mediaType":"CAROUSEL_ALBUM","mediaUrl":"https://scontent-sof1-2.cdninstagram.com/v/t51.82787-15/583034508_18086941478486582_5674497565036041815_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=103&ccb=7-5&_nc_sid=18de74&efg=eyJlZmdfdGFnIjoiQ0FST1VTRUxfSVRFTS5iZXN0X2ltYWdlX3VybGdlbi5DMyJ9&_nc_ohc=J23qKTWCRkYQ7kNvwGLmMei&_nc_oc=AdlJWIwfj5VDvUoWWdV4N--rGHlJpb9ZpDjUhkKm6RV7KeOqs4__wZHMW7oh3EUlgBhcMtw1b1jGNqDuA9kA5flF&_nc_zt=23&_nc_ht=scontent-sof1-2.cdninstagram.com&edm=ANo9K5cEAAAA&_nc_gid=4SRgpM0AFRaLPn1ckPSLqQ&oh=00_AfmPeuhyRCeTRRmnGjvARnaCnkA0kzOTRV5LBNx3Cy23ww&oe=6954E80A","caption":"Micro Zizi/ Miojinho realçando ainda mais a beleza da Ana Vitória 🥺🫰🏾🥰🌹"}]};
+
+        function renderInstagramWidget() {
+            const container = document.getElementById('instagram-feed');
+            if (!container) return;
+            const posts = instaData.posts.slice(0, 8); 
+            let html = '';
+            posts.forEach(post => {
+                let imgUrl = post.mediaUrl;
+                let typeIcon = '';
+                if (post.mediaType === 'VIDEO') {
+                     imgUrl = post.thumbnailUrl || post.mediaUrl;
+                     typeIcon = '<i class="fas fa-play absolute top-3 right-3 text-white drop-shadow-md z-10"></i>';
+                } else if (post.mediaType === 'CAROUSEL_ALBUM') {
+                     typeIcon = '<i class="fas fa-clone absolute top-3 right-3 text-white drop-shadow-md z-10"></i>';
+                }
+                const caption = post.caption ? post.caption.substring(0, 60).replace(/\n/g, ' ') + '...' : 'Ver no Instagram';
+                html += `
+                    <a href="${post.permalink}" target="_blank" class="block relative group overflow-hidden rounded-2xl aspect-square bg-white/5 border border-white/5 hover:border-nalua-orange/50 transition-all duration-300 shadow-lg">
+                        <img src="${imgUrl}" alt="Post Nalua Braids" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100" loading="lazy">
+                        <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4">
+                            <p class="text-white text-xs text-center line-clamp-3 font-medium text-shadow-sm">${caption}</p>
+                        </div>
+                        ${typeIcon}
+                    </a>
+                `;
+            });
+            container.innerHTML = html;
+        }
+        document.addEventListener('DOMContentLoaded', renderInstagramWidget);
     </script>
 </body>
 </html>
